@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app" class="container mt-5">
+    <h1 class="text-center mb-4">Quiz App</h1>
+    <div id="mode-selection" class="text-center mb-4">
+        <button class="btn btn-primary mr-2" onclick="startQuiz('study')">Study Mode</button>
+        <button class="btn btn-secondary" onclick="startQuiz('exam')">Exam Mode</button>
+    </div>
+    <div id="quiz-container" class="hidden">
+        <div id="question-container" class="mb-4">
+            <div id="question" class="h4"></div>
+            <form id="answers" class="mt-3"></form>
+        </div>
+        <button id="next-button" class="btn btn-primary hidden" onclick="nextQuestion()">Next</button>
+    </div>
+    <div id="summary" class="hidden mt-4">
+        <h2>Summary</h2>
+        <div id="result" class="h4 mt-3"></div>
+        <div id="detailed-summary" class="mt-3"></div>
+        <button class="btn btn-primary mt-3" onclick="location.reload()">Retake Quiz</button>
+    </div>
+</div>
+
+<div id="admin-container" class="container mt-5">
+    <h2>Add New Question</h2>
+    <form id="question-form">
+        <textarea id="new-question" class="form-control mb-2" placeholder="Enter question" required></textarea>
+        <textarea id="new-answer-1" class="form-control mb-2" placeholder="Answer 1" required></textarea>
+        <textarea id="new-answer-2" class="form-control mb-2" placeholder="Answer 2" required></textarea>
+        <textarea id="new-answer-3" class="form-control mb-2" placeholder="Answer 3" required></textarea>
+        <textarea id="new-answer-4" class="form-control mb-2" placeholder="Answer 4" required></textarea>
+        <input type="number" id="correct-answer" class="form-control mb-2" placeholder="Correct answer number (1-4)" required>
+        <button type="submit" class="btn btn-primary">Add Question</button>
+    </form>
+</div>
+
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
