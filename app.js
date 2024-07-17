@@ -175,7 +175,7 @@ let questions = shuffleArray( [
         {
             "question": "Si el helicóptero alabea hacia derecha que haremos para volver a posición normal:",
             "answers": ["Cíclico posición neutra", "Colectivo posición neutra", "Cíclico hacia delante", "Cíclico hacia atrás"],
-            "correct": 1
+            "correct": 0
         },
         {
             "question": "La pérdida depende de:",
@@ -235,7 +235,7 @@ let questions = shuffleArray( [
         {
             "question": "Donde se siente la vibración de alta frecuencia del rotor de cola:",
             "answers": ["Pedales", "Cíclico", "Colectivo", "Techo"],
-            "correct": 1
+            "correct": 0
         },
     {
         "question": "En vuelo hacia adelante, la pala de retirada experimenta una inversión del flujo de aire que:",
