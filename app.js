@@ -447,6 +447,52 @@ let questions = shuffleArray( [
         ],
         "correct": 2
     },
+    {
+        "question": "Cual de las siguientes afirmaciones es correcta",
+        "answers": [
+            "Un rotor rigido es el que presenta mas complejidad mecanica",
+            "Un rotor rigido vibra mas que uno articulado",
+            "Un rotor semi-articulado tiene buena respuesta",
+        ],
+        "correct": 1
+    },
+    {
+        "question": "El efecto de desimetria de sustentacion, cuando la velocidad relativa del aire es menor en la pala que retrocede, nos permite",
+        "answers": [
+            "Incrementar la velocidad maxima del helicoptero",
+            "Reduce la velocidasd maxima del helicoptero",
+            "No afecta la velocidad",
+        ],
+        "correct": 0
+    },
+    {
+        "question": "El punto de la pala donde el viento relativo presenta una velocidad mas alta es: ",
+        "answers": [
+            "Extrados",
+            "Intrados",
+            "Punto de remanso",
+            "Delante del punto de remanso"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Un helicoptero se considera estable si: ",
+        "answers": [
+            "Despues de recibir una perturbacion recupera su posicion orignal",
+            "Despues de recibir una perturbacion conserva su nueva orignal",
+            "No se puede saber",
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Un helicoptero con rotor anti-horario en estacionario tendera a moverse (Deriva): ",
+        "answers": [
+            "Hacia la derecha/Sentido opuesto al empuje del rotor de cola",
+            "Hacia arriba y abajo",
+            "Hacia la izquierda/Sentido del empuje del rotor de cola",
+        ],
+        "correct": 0
+    },
     ]);
 
 let currentQuestionIndex = 0;
@@ -478,7 +524,7 @@ function loadQuestion() {
         const label = document.createElement('label');
         input.type = 'radio';
         input.name = 'answer';
-        input.value = currentQuestion.answers.indexOf(answer);
+        input.value = " " + currentQuestion.answers.indexOf(answer);
         input.id = `answer${index}`;
         label.htmlFor = `answer${index}`;
         label.textContent = answer;
